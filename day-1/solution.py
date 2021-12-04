@@ -9,7 +9,7 @@ class Solution:
         for i in range(len(depths) - 1):
             if depths[i] < depths[i+1]:
                 count += 1
-        return count 
+        return count
 
     def count_window_increases(self, depths: List[int], window: int) -> int:
         count = 0

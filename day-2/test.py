@@ -1,11 +1,10 @@
 import unittest
-import solution
 from typing import List
+import solution
 
 class TestSolution(unittest.TestCase):
     def setUp(self) -> None:
         self.solution = solution.Solution()
-        pass
 
     def test_simple_calculate_naive_movement_position(self) -> None:
         moves = file_read_helper('simple_input.txt')
@@ -33,8 +32,8 @@ class TestSolution(unittest.TestCase):
 
 def file_read_helper(filename: str) -> List[str]:
     lines = []
-    with open(filename, 'r') as f:
-        for line in f:
+    with open(filename, 'r', encoding='UTF-8') as file:
+        for line in file:
             lines.append(line.strip())
     return lines
 

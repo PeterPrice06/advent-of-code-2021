@@ -1,12 +1,10 @@
 import unittest
-import solution
 from typing import List
-import io
+import solution
 
 class TestSolution(unittest.TestCase):
     def setUp(self) -> None:
         self.solution = solution.Solution()
-        pass
 
     def test_simple_count_increases(self) -> None:
         depths = file_read_helper('simple_input.txt')
@@ -30,8 +28,8 @@ class TestSolution(unittest.TestCase):
 
 def file_read_helper(filename: str) -> List[int]:
     lines = []
-    with open(filename, 'r') as f:
-        for line in f:
+    with open(filename, 'r', encoding='UTF-8') as file:
+        for line in file:
             lines.append(int(line.strip()))
     return lines
 
