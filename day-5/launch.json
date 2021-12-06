@@ -8,13 +8,6 @@
             "name": "Python: Day 4",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceRoot}/day-4/test.py",
-            "console": "integratedTerminal"
-        },
-        {
-            "name": "Python: Day 5",
-            "type": "python",
-            "request": "launch",
             "program": "${workspaceRoot}/day-5/test.py",
             "console": "integratedTerminal"
         }
