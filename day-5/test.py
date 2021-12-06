@@ -14,8 +14,19 @@ class TestSolution(unittest.TestCase):
 
     def test_bingo_puzzle(self) -> None:
         lines = file_read_helper('day-5/puzzle_input.txt')
-        vent_map = VentMap(lines)
-        self.assertEqual(vent_map.count_intersections(), 5) # Too high 954034
+        vent_map = VentMap(lines, include_diagonals=False)
+        self.assertEqual(vent_map.count_intersections(), 7674) # Too high 954034
+
+    def test_bingo_sample(self) -> None:
+        lines = file_read_helper('day-5/sample_input.txt')
+        vent_map = VentMap(lines, include_diagonals=True)
+        print(vent_map)
+        self.assertEqual(vent_map.count_intersections(), 12)
+
+    def test_bingo_puzzle(self) -> None:
+        lines = file_read_helper('day-5/puzzle_input.txt')
+        vent_map = VentMap(lines, include_diagonals=True)
+        self.assertEqual(vent_map.count_intersections(), 20898) # Too high 954034
 
 def file_read_helper(filename: str) -> List[str]:
     lines = []
