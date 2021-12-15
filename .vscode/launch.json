@@ -38,6 +38,14 @@
             "request": "launch",
             "program": "${workspaceRoot}/day-13/test.py",
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: Day 14",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceRoot}/day-14/test.py",
+            "console": "integratedTerminal"
         }
+
     ]
 }
